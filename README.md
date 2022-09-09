@@ -10,5 +10,5 @@
 
 > php artisan serve
 
-<img src="/public/Screenshot.png" alt="Alt text" title="Optional title">
+![My Image](Screenshot.png)
 
