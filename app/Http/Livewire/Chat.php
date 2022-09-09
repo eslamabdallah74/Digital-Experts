@@ -16,11 +16,8 @@ class Chat extends Component
 
     public $message;
 
-
-
     public function mount()
     {
-
         if ($this->activeUserChat)
         {
             $this->allMessages  = Message::with('user')
@@ -33,7 +30,6 @@ class Chat extends Component
                 ->where('from_user_id',$this->activeUserChat->id);
             })->get();
         }
-
     }
 
     public function getMessage($id)
@@ -65,7 +61,6 @@ class Chat extends Component
         ]);
         $this->reset('message');
         $this->mount();
-
     }
 
     public function render()

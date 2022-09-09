@@ -55,7 +55,6 @@
                                 {{-- Messages sent --}}
                                 @if ($message->user->id == auth()->user()->id)
                                 <li class="clearfix">
-
                                     <div class="message other-message float-right">
                                         {{ $message->message }}
                                         <div class="date">
@@ -68,7 +67,6 @@
                                 @else
                                 {{-- Messages recived --}}
                                 <li class="clearfix">
-
                                     <div class="message my-message">
                                         {{ $message->message }}
                                         <div class="date">
@@ -125,9 +123,11 @@
         width: 100%;
         box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
     }
+
     .chat-app {
         overflow-y: hidden;
     }
+
     .chat-app .people-list {
         width: 280px;
         position: absolute;
@@ -142,7 +142,7 @@
 
     }
 
-    .chat-app .chat-history{
+    .chat-app .chat-history {
         max-height: 500px;
         overflow-y: scroll
     }
@@ -336,6 +336,7 @@
         padding: 4px;
         color: red;
     }
+
     .message-date {
         font-size: 12px;
         color: gray;
