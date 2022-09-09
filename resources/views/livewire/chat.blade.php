@@ -1,7 +1,5 @@
 <div wire:poll.1000ms>
     {{-- Start --}}
-    Current time: {{ now() }}
-
     <div class="container">
         <div class="row clearfix">
             <div class="col-lg-12">
@@ -61,7 +59,9 @@
                                     <div class="message other-message float-right">
                                         {{ $message->message }}
                                         <div class="date">
-                                            <span class="message-date">10:10 AM, Today</span>
+                                            <span class="message-date">
+                                                {{ time_elapsed_string($message->created_at) }}
+                                            </span>
                                         </div>
                                     </div>
                                 </li>
@@ -72,7 +72,9 @@
                                     <div class="message my-message">
                                         {{ $message->message }}
                                         <div class="date">
-                                            <span class="message-date">10:10 AM, Today</span>
+                                            <span class="message-date">
+                                                {{ time_elapsed_string($message->created_at) }}
+                                            </span>
                                         </div>
                                     </div>
                                     @endif
