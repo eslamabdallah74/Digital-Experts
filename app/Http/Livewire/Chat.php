@@ -43,12 +43,14 @@ class Chat extends Component
     }
 
     protected $rules = [
-        'message' => 'required|profanity|min:1',
+        'message' => 'required|min:1',
     ];
 
-    protected $messages = [
-        'message.profanity' => 'This is a bad word, Please be decent'
-    ];
+    // Decided to send the message even if it's bad but make it as stars(***)
+
+    // protected $messages = [
+    //     'message.profanity' => 'This is a bad word, Please be decent'
+    // ];
 
     public function sendMessage()
     {
