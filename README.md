@@ -10,3 +10,5 @@
 
 > php artisan serve
 
+![This is an image](public/Screenshot.png)
+
