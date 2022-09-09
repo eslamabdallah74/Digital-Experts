@@ -49,5 +49,5 @@ We are looping over **allMessages** Then we know if those messages are sent or r
 @if ($message->user->id == auth()->user()->id)
 ```
 
->I used `<div wire:poll.1000ms></div>` To refresh component every second to get any message we Receive but it seems it worked with only the message >Time(sent from), But on changing chat or sending a new message the component will live refresh to get recent messages
+>I used `<div wire:poll.1000ms></div>` To refresh component every second to get any message we Receive but it seems it only worked with only the message Time(sent from), But on changing chat or sending a new message the component will live refresh to get recent messages
 
