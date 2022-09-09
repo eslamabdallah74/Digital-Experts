@@ -43,16 +43,23 @@ class Chat extends Component
     }
 
     protected $rules = [
-        'message' => 'required|min:1',
+        'message' => 'required|profanity|min:1',
+    ];
+
+    protected $messages = [
+        'message.profanity' => 'This is a bad word, Please be decent'
     ];
 
     public function sendMessage()
     {
         $validatedData = $this->validate();
+
+        $filterdMessage = app('profanityFilter')->filter($this->message);
+
         $sendMessage   = Message::create([
             'from_user_id'  => auth()->user()->id,
             'to_user_id'    => $this->activeUserChat->id,
-            'message'       => $this->message,
+            'message'       => $filterdMessage,
         ]);
         $this->reset('message');
         $this->mount();
