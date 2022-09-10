@@ -1,4 +1,4 @@
-<div wire:poll.1000ms>
+<div wire:poll.10000ms>
     {{-- Start --}}
     <div class="container">
         <div class="row clearfix">
