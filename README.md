@@ -49,7 +49,7 @@ We are looping over **allMessages** Then we know if those messages are sent or r
 @if ($message->user->id == auth()->user()->id)
 ```
 
->I used `<div wire:poll.1000ms></div>` To refresh component every second to get any message we receive but it seems it did only work with message time(sent from), But on changing chat or sending a new message the component will live refresh to get recent messages
+>I used `<div wire:poll.1000ms></div>` To refresh component every second to get any new message we receive but it seem it did only work with message time(sent from), But on changing chat or sending a new message the component will live refresh to get recent messages
 
 Filtering messages for bad words was easy because of **Profanity Package**. I added some bad words in Profanity config file 
 ```
