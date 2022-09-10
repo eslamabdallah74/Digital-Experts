@@ -60,6 +60,8 @@ return [
         'boob',
         'tits',
         'hentai',
+        'porn',
+        'xnxx',
         '3rs',
         'anal',
         'anus',
