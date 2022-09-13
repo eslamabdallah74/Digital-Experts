@@ -16,7 +16,7 @@
 
 We are making a simple query to get all Messages (Sent and Received),
 While using **with('user')** to get Relationship between them.
-We are if condition to make sure there are a chat selected.
+We are using if condition to make sure there are a chat selected.
 ```
 public function mount()
 {
